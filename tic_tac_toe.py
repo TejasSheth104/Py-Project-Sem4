@@ -13,10 +13,14 @@ def main_body():
     window.title("Tic Tac Toe")
     window.geometry("300x400")
 
-    lab_def=Label(window, text="\nPlayer1 = X\nPlayer2 = O\n", width=40,height=2)
-    lab_def.grid(row=2, columnspan=4)
-    
-    draw_grid.draw_grid(window,p_val,counter,terminate,player1,player2,keypress_count)
+    # lab_def=Label(window, text="\nPlayer1 = X\nPlayer2 = O\n", width=40,height=2)
+    # lab_def.grid(row=2, columnspan=4)
+    button_play1=Button(window, text="Player1 = 'X'", width=20,height=1)
+    button_play1.grid(row=1, columnspan=4)
+    button_play2=Button(window, text="Player2 = 'O'", width=20,height=1,state=DISABLED)
+    button_play2.grid(row=2, columnspan=4)
+
+    draw_grid.draw_grid(window,p_val,counter,terminate,player1,player2,keypress_count,button_play1,button_play2)
 
     quit_button=Button(window, text="EXIT", command=window.destroy, width=20,height=1)
     quit_button.grid(row=10, columnspan=4)

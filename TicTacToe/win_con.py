@@ -12,7 +12,7 @@ def win_cond(window,p_val,counter,terminate,player1,player2,keypress_count):
     poss_7=permutations([1,5,9])
     poss_8=permutations([3,5,7])
     
-    for i in poss_1,poss_2,poss_3,poss_4,poss_5,poss_6,poss_7,poss_8:
+    for i in poss_3,poss_4,poss_2,poss_1,poss_5,poss_6,poss_7,poss_8:
         for j in list(i):
             play1=all(poss in player1 for poss in j)
             play2=all(poss in player2 for poss in j)
