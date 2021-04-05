@@ -2,7 +2,7 @@ from tkinter import *
 from tkinter.messagebox import *
 from itertools import permutations
 
-def win_cond(window,p_val,counter,terminate,player1,player2,keypress_count):
+def win_cond(terminate,player1,player2):
     poss_1=permutations([1,2,3])
     poss_2=permutations([4,5,6])
     poss_3=permutations([7,8,9])
@@ -25,14 +25,14 @@ def win_cond(window,p_val,counter,terminate,player1,player2,keypress_count):
                 showinfo("RESULT - ","Player 2 WINS. !!!")
                 terminate=True
                 return terminate
-            temp_var=0
-            for value in keypress_count.values():
-                if value==1:
-                    temp_var=1
-                else:
-                    temp_var=0
-                    break
-            if temp_var==1:
-                showinfo("RESULT - ","It's a DRAW. !!!")
-                terminate=True
-                return terminate
+            # temp_var=0
+            # for value in keypress_count.values():
+            #     if value==1:
+            #         temp_var=1
+            #     else:
+            #         temp_var=0
+            #         break
+            # if temp_var==1:
+            #     showinfo("RESULT - ","It's a DRAW. !!!")
+            #     terminate=True
+            #     return terminate

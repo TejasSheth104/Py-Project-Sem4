@@ -20,7 +20,7 @@ def main_body():
     button_play2=Button(window, text="Player2 = 'O'", width=20,height=1,state=DISABLED)
     button_play2.grid(row=2, columnspan=4)
 
-    draw_grid.draw_grid(window,p_val,counter,terminate,player1,player2,keypress_count,button_play1,button_play2)
+    draw_grid.draw_grid(window,button_play1,button_play2)
 
     quit_button=Button(window, text="EXIT", command=window.destroy, width=20,height=1)
     quit_button.grid(row=10, columnspan=4)

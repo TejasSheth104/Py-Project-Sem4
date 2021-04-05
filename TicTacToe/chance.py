@@ -2,7 +2,7 @@ from tkinter import *
 
 counter=0
 
-def chance(window,p_val,terminate,player1,player2,keypress_count,box_num,button_play1,button_play2):
+def chance(player1,player2,box_num,button_play1,button_play2):
     global counter
     for box_num_value in range(1,10):
         if box_num==box_num_value:
