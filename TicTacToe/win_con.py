@@ -3,7 +3,7 @@ from tkinter.messagebox import *
 from itertools import permutations
 
 
-def win_cond(terminate,player1,player2):
+def win_cond(terminate,player1,player2,counter):
 
 # generates every Winning Possibility using inbuilt Permutation Function.    
     poss_1=permutations([1,2,3])
@@ -22,6 +22,7 @@ def win_cond(terminate,player1,player2):
 # check if ANY player has matched with the winning condition.    
             play1=all(poss in player1 for poss in j)
             play2=all(poss in player2 for poss in j)
+            # draw=all(poss in player1 for poss in j) or all(poss in player2 for poss in j)
 
             if play1:
                 showinfo("RESULT - ","Player 1 WINS. !!!")
@@ -32,6 +33,11 @@ def win_cond(terminate,player1,player2):
                 showinfo("RESULT - ","Player 2 WINS. !!!")
                 terminate=True
                 return terminate
+
+            # elif counter%9==0:
+            #     showinfo("RESULT - ","It's a DRAW. !!!")
+            #     terminate=True
+            #     return terminate
     
             # temp_var=0
             # for value in keypress_count.values():

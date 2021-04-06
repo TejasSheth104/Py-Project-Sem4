@@ -16,11 +16,11 @@ def chance(player1,player2,box_num,button_play1,button_play2):
                 player1.append(box_num)
                 button_play1.config(state=DISABLED)         # disable button 1
                 button_play2.config(state=ACTIVE)           # enable button 2
-                return 'X'
+                return 'X',counter
 
             elif counter%2!=0:
                 counter+=1
                 player2.append(box_num)
                 button_play2.config(state=DISABLED)         # disable button 2
                 button_play1.config(state=ACTIVE)           # enable button 1
-                return 'O'
+                return 'O',counter

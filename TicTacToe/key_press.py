@@ -25,11 +25,11 @@ def key_press(window,box_num,place_value,button_play1,button_play2):
 
 # if value of dictionary is 1 already(returning Value FALSE.), no change takes place.
     if limit_keypress(keypress_count,box_num):
-        p_val=chance.chance(player1,player2,box_num,button_play1,button_play2)
+        p_val,counter=chance.chance(player1,player2,box_num,button_play1,button_play2)
         place_value.set(p_val)
 
 # sets the value (X/O) at respective position.        
-        if win_con.win_cond(terminate,player1,player2):
+        if win_con.win_cond(terminate,player1,player2,counter):
             msg=askquestion(title="TRY AGAIN", message="WANT TO PLAY AGAIN?")
 
 # reset every parameter, and call the Grid Function to restart.
