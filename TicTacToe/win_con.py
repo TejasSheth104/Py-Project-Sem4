@@ -2,8 +2,16 @@ from tkinter import *
 from tkinter.messagebox import *
 from itertools import permutations
 
+def check_draw(keypress_count):
+    print(keypress_count)
+    for value in keypress_count.values():
+        if value==0:
+            return False
+        elif value==1:
+            continue
+    return True
 
-def win_cond(terminate,player1,player2,counter):
+def win_cond(terminate,player1,player2,counter,keypress_count):
 
 # generates every Winning Possibility using inbuilt Permutation Function.    
     poss_1=permutations([1,2,3])
@@ -23,7 +31,8 @@ def win_cond(terminate,player1,player2,counter):
             play1=all(poss in player1 for poss in j)
             play2=all(poss in player2 for poss in j)
             # draw=all(poss in player1 for poss in j) or all(poss in player2 for poss in j)
-
+            print(poss in player1 for poss in j)
+            print(poss in player2 for poss in j)
             if play1:
                 showinfo("RESULT - ","Player 1 WINS. !!!")
                 terminate=True
@@ -34,19 +43,9 @@ def win_cond(terminate,player1,player2,counter):
                 terminate=True
                 return terminate
 
-            # elif counter%9==0:
-            #     showinfo("RESULT - ","It's a DRAW. !!!")
-            #     terminate=True
-            #     return terminate
+            elif check_draw(keypress_count):
+                showinfo("RESULT - ","It's a DRAW. !!!")
+                terminate=True
+                return terminate
     
-            # temp_var=0
-            # for value in keypress_count.values():
-            #     if value==1:
-            #         temp_var=1
-            #     else:
-            #         temp_var=0
-            #         break
-            # if temp_var==1:
-            #     showinfo("RESULT - ","It's a DRAW. !!!")
-            #     terminate=True
-            #     return terminate
+            
