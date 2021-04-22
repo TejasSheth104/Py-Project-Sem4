@@ -11,6 +11,7 @@ def submit(input_name1,input_name2,frame_main,frame_player):
     name_val2=input_name2.get()
 
     frame_player.tkraise()
+    
 #==================Frame Player code
     play_user1=Button(frame_player, text=str(name_val1+"'X'"), font=('arial',10,'bold') ,width=18,height=1)
     play_user1.grid(row=3, columnspan=4,sticky='w')
