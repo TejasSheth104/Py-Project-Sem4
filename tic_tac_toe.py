@@ -37,13 +37,13 @@ def main_body():
 
 #==================Frame Main code
     # First Row
-    name1=Label(frame_main,text= "Player1 Name")
+    name1=Label(frame_main,text= "Player1 - ")
     name1.grid(row=1,column=2,sticky='w')
     input_name1=Entry(frame_main)
     input_name1.grid(row=1,column=3)
 
     # Second Row
-    name2=Label(frame_main,text= "Player2 Name")
+    name2=Label(frame_main,text= "Player2 - ")
     name2.grid(row=2,column=2,sticky='w')
     input_name2=Entry(frame_main)
     input_name2.grid(row=2,column=3)
